@@ -1,67 +1,52 @@
 # Rust Todo CLI
 
-A practical Rust project built to showcase core skills in:
-- Rust syntax and ownership
+<p align="center">
+  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" alt="Rust" />
+  <img src="https://img.shields.io/badge/CLI-Tool-4EAA25?style=for-the-badge" alt="CLI Tool" />
+  <img src="https://img.shields.io/badge/JSON-Storage-323330?style=for-the-badge" alt="JSON Storage" />
+</p>
+
+A practical Rust project designed as a portfolio piece to demonstrate core software engineering and Rust programming skills.
+
+## Project overview
+
+This project is a command-line todo manager built in Rust. It helps users manage tasks from the terminal, store them in a file, and keep a simple but useful workflow for daily task tracking.
+
+The goal of this project is to showcase:
+- Rust fundamentals and syntax
 - Structs, enums, and pattern matching
-- File handling and JSON persistence
-- Command-line interface design
-- Basic error handling
+- File I/O and JSON persistence
+- CLI argument handling
+- Error handling and user-friendly output
 
-This project is a simple but professional CLI todo app that lets you create, view, complete, and delete tasks from a JSON file.
+## Why this project is valuable
 
-## Why this project is useful
-
-This is a strong portfolio project because it demonstrates that you can build a complete, real-world command-line tool in Rust without relying on a framework. It can be used as a foundation for more advanced apps later.
+This is a strong portfolio project because it demonstrates that I can build a real, useful application in Rust rather than just learning syntax in isolation. It shows practical problem solving, clean code structure, and the ability to build a tool that could be extended into a larger application later.
 
 ## Features
 
-- Add tasks
-- List all tasks
-- Mark tasks as complete
-- Delete tasks
+- Add a new task
+- View all tasks
+- Mark a task as complete
+- Delete a task
 - Clear all tasks
-- Save data in a JSON file
+- Save tasks to a local JSON file
+- Use a custom storage path with `--file`
 
-## Project structure
-
-```text
-rust-todo-cli/
-├── Cargo.toml
-├── README.md
-├── src/
-│   └── main.rs
-└── tasks.json
-```
-
-## Prerequisites
-
-Install Rust from the official site:
-
-- https://rustup.rs/
-
-Then verify installation:
+## Example usage
 
 ```bash
-rustc --version
-cargo --version
-```
-
-## Run the project
-
-From the project root:
-
-```bash
-cargo run -- add "Buy groceries"
+cargo run -- add "Write project update"
 cargo run -- list
 cargo run -- done 1
 cargo run -- delete 1
 cargo run -- clear
 ```
 
-## Using a custom storage file
+## Custom storage file
 
 ```bash
-cargo run -- --file my-tasks.json add "Write project update"
+cargo run -- --file my-tasks.json add "Review networking notes"
 cargo run -- --file my-tasks.json list
 ```
 
@@ -75,14 +60,65 @@ $ cargo run -- list
 [ ] 1. Plan portfolio update
 ```
 
+## Project structure
+
+```text
+rust-todo-cli/
+├── Cargo.toml
+├── README.md
+├── src/
+│   └── main.rs
+├── tasks.json
+└── .gitignore
+```
+
+## Learning outcomes demonstrated
+
+This project helps demonstrate understanding of:
+- Rust ownership and borrowing
+- Working with data structures
+- Creating reusable logic for app features
+- Reading and writing files
+- Handling user input and commands
+- Building a CLI from scratch
+
+## Getting started
+
+### Prerequisites
+
+Install Rust with rustup:
+
+- https://rustup.rs/
+
+Then verify installation:
+
+```bash
+rustc --version
+cargo --version
+```
+
+### Run locally
+
+```bash
+git clone https://github.com/celinasohal/rust-todo-cli.git
+cd rust-todo-cli
+cargo run -- list
+```
+
 ## Future improvements
 
-- Add task categories or priorities
+Possible extensions for this project include:
+- Add task priorities
+- Add categories or tags
 - Add due dates
-- Add a persistent config directory
-- Add unit tests
-- Build a GUI or web version later
+- Add tests for the CLI logic
+- Save tasks in a dedicated app folder
+- Build a more advanced task manager with filtering
 
-## GitHub
+## Repository
 
-Repository: https://github.com/celinasohal/rust-todo-cli
+- GitHub: https://github.com/celinasohal/rust-todo-cli
+
+## License
+
+This project is licensed under the MIT License.
